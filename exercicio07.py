@@ -3,12 +3,15 @@ litros = float(input("Quantos litros: "))
 vgaso = 5.80
 vEtal = 4.90
 
-if tipo == 'g':
+if tipo == 'G'or tipo =='g':
     valor = vgaso*litros
 else:
-    valor = vEtal*litros
+   if tipo == 'E'or tipo =='e':
+       valor = vEtal * litros
+   else:
+       print("Tipo de combustivel invalido")
 
-print(f"Você gastou R$ {valor: .2f}")
+print(f'Você gastou R$ {valor: .2f}')
 
 
 
